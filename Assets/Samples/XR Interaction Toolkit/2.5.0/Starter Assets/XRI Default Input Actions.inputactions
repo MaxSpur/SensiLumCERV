@@ -741,6 +741,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "PrimaryButton",
+                    "type": "Button",
+                    "id": "3f399081-6d8e-4db6-823c-3313b85a0217",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -908,6 +917,17 @@
                     "action": "Scale Delta",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "24a38804-fca1-4045-965c-f7b855c1df75",
+                    "path": "<XRController>{LeftHand}/{PrimaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PrimaryButton",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -993,7 +1013,7 @@
                     "name": "",
                     "id": "95fa1419-ca7b-4c8a-8d15-7d46e58d82e3",
                     "path": "<XRController>{LeftHand}/{Primary2DAxis}",
-                    "interactions": "Sector(directions=-1,sweepBehavior=3)",
+                    "interactions": "Sector(directions=1,sweepBehavior=3)",
                     "processors": "",
                     "groups": "Noncontinuous Move",
                     "action": "Teleport Select",
@@ -1497,6 +1517,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "PrimaryButton",
+                    "type": "Button",
+                    "id": "183df897-f76b-4b80-ade3-16d3faa1d089",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -1664,6 +1693,17 @@
                     "action": "Scale Delta",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "60f99797-6ae4-47ba-8002-7dc29a671205",
+                    "path": "<XRController>{RightHand}/{PrimaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PrimaryButton",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -1749,7 +1789,7 @@
                     "name": "",
                     "id": "919c4a6c-22ed-4083-8e14-f30e91ff59fe",
                     "path": "<XRController>{RightHand}/{Primary2DAxis}",
-                    "interactions": "Sector(directions=-1,sweepBehavior=3)",
+                    "interactions": "Sector(directions=3,sweepBehavior=3)",
                     "processors": "",
                     "groups": "Generic XR Controller",
                     "action": "Teleport Select",
@@ -1826,7 +1866,7 @@
                     "name": "",
                     "id": "31d838df-4d4e-4c16-a373-b9c07d9d2e2a",
                     "path": "<XRController>{RightHand}/{Primary2DAxis}",
-                    "interactions": "Sector(directions=12,sweepBehavior=1),Sector(directions=2,sweepBehavior=2)",
+                    "interactions": "Sector(directions=12,sweepBehavior=1)",
                     "processors": "",
                     "groups": "Generic XR Controller",
                     "action": "Snap Turn",
