@@ -69,12 +69,13 @@ public class SpeciesSwitcher : MonoBehaviour
 				indexTexture1 += textures.Count;
 			postProcess.SetTexture("_Texture1", textures[indexTexture1]);
 			menu.SwitchPrevious(names[indexTexture1]);
+			
 		}
 		if (inTransition)
 		{
-			textureBlend += Time.deltaTime;
-			if(textureBlend>1)
-			{
+			//textureBlend += Time.deltaTime;
+			//if(textureBlend>1)
+			//{
 				textureBlend = 0;
 				postProcess.SetFloat("_Blend", textureBlend);
 				indexTexture0 = indexTexture1;
@@ -82,8 +83,8 @@ public class SpeciesSwitcher : MonoBehaviour
 				postProcess.SetTexture("_Texture1", textures[indexTexture1]);
 				ApplyPostProcess();
 				inTransition = false;
-				return;
-			}
+				//return;
+			//}
 			bloom.intensity.value = Mathf.Lerp(bloomParams[indexTexture0][lightmapSwitcher.current].intensity, bloomParams[indexTexture1][lightmapSwitcher.current].intensity, textureBlend);
 			bloom.scatter.value = Mathf.Lerp(bloomParams[indexTexture0][lightmapSwitcher.current].scatter, bloomParams[indexTexture1][lightmapSwitcher.current].scatter, textureBlend);
 			bloom.tint.value = Color.Lerp(bloomParams[indexTexture0][lightmapSwitcher.current].tint, bloomParams[indexTexture1][lightmapSwitcher.current].tint, textureBlend);

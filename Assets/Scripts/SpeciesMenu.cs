@@ -29,36 +29,36 @@ public class SpeciesMenu : MonoBehaviour
 		currentAnimalPosition = currentAnimal.transform.localPosition; 
 		nextAnimalPosition = nextAnimal.transform.localPosition;
 		canvasWidth = GetComponent<RectTransform>().rect.width;
-		// TODO (priorité faible):
-		//       - Ajouter une image à chaque espèce (nom à lire dans csv, fichier à lire dans StreamingAssets (mais pas à faire dans cette classe a priori))
-		//       - Récupérer le bouton (enfant de currentAnimal) et s'abonner au OnClick
-		//       - Créer une méthode a appeler sur le OnClick qui "fait sortir" le canvas du sol pour le mettre
-		//         à la vertical et faire apparaitre un menu
-		//       - Faire une méthode appeler quand on click sur un élément du menu, fait la transition vers l'espèce choisie
-	}   //       - Faire une méthode qui "fait revenir" le canvas sur le sol et réaffiche l'espèce choisie
+		// TODO (prioritï¿½ faible):
+		//       - Ajouter une image ï¿½ chaque espï¿½ce (nom ï¿½ lire dans csv, fichier ï¿½ lire dans StreamingAssets (mais pas ï¿½ faire dans cette classe a priori))
+		//       - Rï¿½cupï¿½rer le bouton (enfant de currentAnimal) et s'abonner au OnClick
+		//       - Crï¿½er une mï¿½thode a appeler sur le OnClick qui "fait sortir" le canvas du sol pour le mettre
+		//         ï¿½ la vertical et faire apparaitre un menu
+		//       - Faire une mï¿½thode appeler quand on click sur un ï¿½lï¿½ment du menu, fait la transition vers l'espï¿½ce choisie
+	}   //       - Faire une mï¿½thode qui "fait revenir" le canvas sur le sol et rï¿½affiche l'espï¿½ce choisie
 	private void Update()
 	{
 		if(currentMoveWay<0)
 		{
-			switchTime += Time.deltaTime;
-			if(switchTime > 1)
-			{
+			//switchTime += Time.deltaTime;
+			//if(switchTime > 1)
+			//{
 				Set(previousAnimalText.text);
 				return;
-			}
-			previousAnimal.transform.localPosition = previousAnimalPosition - switchCurve.Evaluate(switchTime) * canvasWidth * Vector2.right;
-			currentAnimal.transform.localPosition = currentAnimalPosition - switchCurve.Evaluate(switchTime) * canvasWidth * Vector2.right;
+			//}
+			//previousAnimal.transform.localPosition = previousAnimalPosition - switchCurve.Evaluate(switchTime) * canvasWidth * Vector2.right;
+			//currentAnimal.transform.localPosition = currentAnimalPosition - switchCurve.Evaluate(switchTime) * canvasWidth * Vector2.right;
 		}
 		if (currentMoveWay>0)
 		{
-			switchTime += Time.deltaTime;
-			if (switchTime > 1)
-			{
+			// switchTime += Time.deltaTime;
+			// if (switchTime > 1)
+			// {
 				Set(nextAnimalText.text);
 				return;
-			}
-			nextAnimal.transform.localPosition = nextAnimalPosition + switchCurve.Evaluate(switchTime) * canvasWidth * Vector2.right;
-			currentAnimal.transform.localPosition = currentAnimalPosition + switchCurve.Evaluate(switchTime) * canvasWidth * Vector2.right;
+			// }
+			// nextAnimal.transform.localPosition = nextAnimalPosition + switchCurve.Evaluate(switchTime) * canvasWidth * Vector2.right;
+			// currentAnimal.transform.localPosition = currentAnimalPosition + switchCurve.Evaluate(switchTime) * canvasWidth * Vector2.right;
 		}
 	}
 	public void Set(string animalName)
