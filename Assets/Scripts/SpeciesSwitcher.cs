@@ -73,7 +73,7 @@ public class SpeciesSwitcher : MonoBehaviour
 		if (inTransition)
 		{
 			textureBlend += Time.deltaTime;
-			if(textureBlend==0)
+			if(textureBlend>1)
 			{
 				textureBlend = 0;
 				postProcess.SetFloat("_Blend", textureBlend);
@@ -97,7 +97,7 @@ public class SpeciesSwitcher : MonoBehaviour
 	public void ApplyPostProcess()
 	{
 		bloom.intensity.value = bloomParams[indexTexture0][lightmapSwitcher.current].intensity;
-		//bloom.scatter.value = bloomParams[indexTexture0][lightmapSwitcher.current].scatter;
+		bloom.scatter.value = bloomParams[indexTexture0][lightmapSwitcher.current].scatter;
 		bloom.tint.value = bloomParams[indexTexture0][lightmapSwitcher.current].tint;
 		colorAdjustments.postExposure.value = postExposure[indexTexture0][lightmapSwitcher.current];
 	}

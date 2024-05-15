@@ -3835,7 +3835,6 @@ GameObject:
   - component: {fileID: 270059314}
   - component: {fileID: 270059313}
   - component: {fileID: 270059312}
-  - component: {fileID: 270059315}
   m_Layer: 8
   m_Name: Plane
   m_TagString: Untagged
@@ -3930,22 +3929,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 270059310}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &270059315
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 270059310}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45ef93edcff644496891a6764b777b76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  teleportRestriction:
-    serializedVersion: 2
-    m_Bits: 0
-  isRestricted: 0
 --- !u!1 &274804300
 GameObject:
   m_ObjectHideFlags: 0
@@ -30755,6 +30738,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Questionnaire
+      objectReference: {fileID: 0}
+    - target: {fileID: 6645135308499714034, guid: fabd02105ea8f47e5a1a112f12319e39,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6808976601654664067, guid: fabd02105ea8f47e5a1a112f12319e39,
         type: 3}

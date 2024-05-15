@@ -2639,7 +2639,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lightmapSwitcher: {fileID: 157731539}
-  speciesSwitcher: {fileID: 0}
+  speciesSwitcher: {fileID: 1517091940}
   Menu: {fileID: -8525429354371678379, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   envName: {fileID: 2058636239}
 --- !u!114 &157731539
@@ -35571,7 +35571,8 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1681985806}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 818933980313253611, guid: fabd02105ea8f47e5a1a112f12319e39, type: 3}
     m_RemovedGameObjects:
     - {fileID: 4502307188729984448, guid: fabd02105ea8f47e5a1a112f12319e39, type: 3}
     - {fileID: 2378438322058836006, guid: fabd02105ea8f47e5a1a112f12319e39, type: 3}
