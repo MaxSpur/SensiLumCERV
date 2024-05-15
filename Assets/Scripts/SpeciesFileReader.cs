@@ -239,7 +239,7 @@ public class SpeciesFileReader : MonoBehaviour
 			}
 			else
 			{
-				Debug.LogWarning("Le champ "+header[i]+" devrait être une colonne située avant les longueurs d'ondes.");
+				Debug.LogWarning("Le champ "+header[i]+" devrait ï¿½tre une colonne situï¿½e avant les longueurs d'ondes.");
 			}
 		}
 	}
@@ -411,9 +411,9 @@ public class SpeciesFileReader : MonoBehaviour
 			}
 			//Ajouter tex3d au speciesSwitcher.textures
 			speciesSwitcher.textures.Add(tex3d);
-			//Ajouter le nom de l'espèce au speciesSwitcher.names
+			//Ajouter le nom de l'espï¿½ce au speciesSwitcher.names
 			speciesSwitcher.names.Add(e.name);
-			//Penser à supprimer les textures et noms des espèces au speciesSwitcher dans la scene (laisser l'Humain)
+			//Penser ï¿½ supprimer les textures et noms des espï¿½ces au speciesSwitcher dans la scene (laisser l'Humain)
 		}
 	}
 	private void Update()

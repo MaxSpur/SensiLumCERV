@@ -17,7 +17,7 @@ public class UIController : MonoBehaviour
     private void Start()
     {
         // Make the GameObject initially invisible when the scene launches
-        gameObject.SetActive(false);
+        gameObject.SetActive(true);
     }
 
     private void Awake()

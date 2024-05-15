@@ -69,7 +69,6 @@ public class SpeciesSwitcher : MonoBehaviour
 				indexTexture1 += textures.Count;
 			postProcess.SetTexture("_Texture1", textures[indexTexture1]);
 			menu.SwitchPrevious(names[indexTexture1]);
-			
 		}
 		if (inTransition)
 		{
@@ -105,7 +104,10 @@ public class SpeciesSwitcher : MonoBehaviour
 
 	private void OnDestroy()
 	{
-		postProcess.SetTexture("_Texture0", textures[0]);
+		if (textures.Count > 0)
+    	{
+        postProcess.SetTexture("_Texture0", textures[0]);
+   		}
 	}
 
 	void DisplayAnimalsName()

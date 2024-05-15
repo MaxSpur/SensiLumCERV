@@ -1090,7 +1090,7 @@
                     "name": "",
                     "id": "a46b49d0-0754-4dac-a9a5-a822e10751f2",
                     "path": "<XRController>{LeftHand}/{Primary2DAxis}",
-                    "interactions": "Sector(directions=12,sweepBehavior=1)",
+                    "interactions": "Sector(directions=12,sweepBehavior=2,pressPoint=0.5)",
                     "processors": "",
                     "groups": "Generic XR Controller",
                     "action": "Snap Turn",

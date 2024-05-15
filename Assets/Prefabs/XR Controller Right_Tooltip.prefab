@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7701436019549063074}
   - component: {fileID: 8119082477305625782}
   - component: {fileID: 8940088623214753995}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34,7 +34,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -22, y: 0}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8119082477305625782
@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Menu
+  m_text: Afficher / Masquer Questions
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -92,8 +92,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 35
+  m_fontSizeBase: 35
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -180,7 +180,7 @@ GameObject:
   - component: {fileID: 642526850249143522}
   - component: {fileID: 7862380554417480734}
   - component: {fileID: 9223347930906404394}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: LineRenderer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -331,7 +331,7 @@ GameObject:
   - component: {fileID: 4935485305781909477}
   - component: {fileID: 2483143577951023733}
   - component: {fileID: 4338388341938364426}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -546,7 +546,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4636919905977551921}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -579,7 +579,7 @@ GameObject:
   - component: {fileID: 5184577685241756701}
   - component: {fileID: 4113160077577600065}
   - component: {fileID: 969931491801945770}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: LineRenderer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -813,7 +813,7 @@ GameObject:
   - component: {fileID: 7799710340736638457}
   - component: {fileID: 5471133119110960875}
   - component: {fileID: 4521920023747553273}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -890,7 +890,7 @@ GameObject:
   - component: {fileID: 2661802782960685744}
   - component: {fileID: 3205407359170184059}
   - component: {fileID: 4318876329419649020}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -965,7 +965,7 @@ GameObject:
   - component: {fileID: 7564645005894458668}
   - component: {fileID: 3703608858546028650}
   - component: {fileID: 5823153902667936855}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1038,13 +1038,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 993033458974824138}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Thumbstick_Tooltip_Switch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &993033458974824138
 Transform:
   m_ObjectHideFlags: 0
@@ -1075,7 +1075,7 @@ GameObject:
   - component: {fileID: 2793164005867464309}
   - component: {fileID: 2941320403208949073}
   - component: {fileID: 1720870213156167248}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1257,13 +1257,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8684791854550332033}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Thumbstick_Tooltip_Teleport
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8684791854550332033
 Transform:
   m_ObjectHideFlags: 0
@@ -1412,7 +1412,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3562876456296560701}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Button_B_Tooltip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1446,7 +1446,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1223233801064618029}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Tip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1481,7 +1481,7 @@ GameObject:
   - component: {fileID: 4142250456625019900}
   - component: {fileID: 3392932200884876599}
   - component: {fileID: 7802517094474745627}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1580,7 +1580,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8360321020243789756}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1613,7 +1613,7 @@ GameObject:
   - component: {fileID: 2868417148549994406}
   - component: {fileID: 5157715437215375292}
   - component: {fileID: 6127422497681153132}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: LineRenderer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1700,7 +1700,7 @@ LineRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0.22459061, g: 0.78577536, b: 0.9716981, a: 1}
+      key0: {r: 0.4392157, g: 0.44705883, b: 0.43137255, a: 1}
       key1: {r: 0.2392157, g: 0.7686275, b: 0.9450981, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
@@ -1845,7 +1845,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2961155916986792753}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Tip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1877,7 +1877,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2877957072995620158}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Tip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2077,7 +2077,7 @@ GameObject:
   - component: {fileID: 8913362203720420003}
   - component: {fileID: 1718884640009904258}
   - component: {fileID: 8505658141437482099}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2125,7 +2125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 0.18431373, g: 0.7725491, b: 0.95294124, a: 0.392}
+  m_Color: {r: 0.4392157, g: 0.44705883, b: 0.43137255, a: 0.392}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2234,7 +2234,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4430505489377198903}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2267,7 +2267,7 @@ GameObject:
   - component: {fileID: 8227260626354856026}
   - component: {fileID: 6325334283064564706}
   - component: {fileID: 7589047945224550693}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2399,7 +2399,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7446409628902830720}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Tooltips
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2436,7 +2436,7 @@ GameObject:
   - component: {fileID: 6756440824347116266}
   - component: {fileID: 1399497503040746097}
   - component: {fileID: 3229325516705953296}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2460,8 +2460,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: -115.086, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.02711, y: 0}
-  m_SizeDelta: {x: 991.9114, y: 1218.0168}
+  m_AnchoredPosition: {x: -0.05853, y: 0}
+  m_SizeDelta: {x: 2033.0476, y: 1218.0168}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &6756440824347116266
 Canvas:
@@ -2537,7 +2537,7 @@ GameObject:
   - component: {fileID: 5646025554143750678}
   - component: {fileID: 2195536967392978703}
   - component: {fileID: 6035290123806964880}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2586,7 +2586,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 0.18431373, g: 0.7725491, b: 0.95294124, a: 0.392}
+  m_Color: {r: 0.4392157, g: 0.44705883, b: 0.43137255, a: 0.392}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
