@@ -104,7 +104,10 @@ public class SpeciesSwitcher : MonoBehaviour
 
 	private void OnDestroy()
 	{
-		postProcess.SetTexture("_Texture0", textures[0]);
+		if (textures.Count > 0)
+    	{
+        postProcess.SetTexture("_Texture0", textures[0]);
+   		}
 	}
 
 	void DisplayAnimalsName()

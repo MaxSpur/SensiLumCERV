@@ -4,8 +4,7 @@ using TMPro;
 using UnityEngine;
 
 public class SpeciesMenu : MonoBehaviour
-{
-	public Transform previousAnimal;
+{public Transform previousAnimal;
 	private TextMeshProUGUI previousAnimalText;
 	private Vector2 previousAnimalPosition;
 
@@ -16,7 +15,9 @@ public class SpeciesMenu : MonoBehaviour
 	public Transform nextAnimal;
 	private TextMeshProUGUI nextAnimalText;
 	private Vector2 nextAnimalPosition;
-	public AnimationCurve switchCurve = AnimationCurve.EaseInOut(0,0,1,1);
+	//public AnimationCurve switchCurve = AnimationCurve.EaseInOut(0,0,1,1);
+	public AnimationCurve switchCurve = AnimationCurve.Constant(0, 1, 1);
+
 	private int currentMoveWay = 0;
 	private float switchTime=0;
 	private float canvasWidth=0;
@@ -29,36 +30,36 @@ public class SpeciesMenu : MonoBehaviour
 		currentAnimalPosition = currentAnimal.transform.localPosition; 
 		nextAnimalPosition = nextAnimal.transform.localPosition;
 		canvasWidth = GetComponent<RectTransform>().rect.width;
-		// TODO (priorité faible):
-		//       - Ajouter une image à chaque espèce (nom à lire dans csv, fichier à lire dans StreamingAssets (mais pas à faire dans cette classe a priori))
-		//       - Récupérer le bouton (enfant de currentAnimal) et s'abonner au OnClick
-		//       - Créer une méthode a appeler sur le OnClick qui "fait sortir" le canvas du sol pour le mettre
-		//         à la vertical et faire apparaitre un menu
-		//       - Faire une méthode appeler quand on click sur un élément du menu, fait la transition vers l'espèce choisie
-	}   //       - Faire une méthode qui "fait revenir" le canvas sur le sol et réaffiche l'espèce choisie
+		// TODO (prioritÃ© faible):
+		//       - Ajouter une image Ã  chaque espÃ¨ce (nom Ã  lire dans csv, fichier Ã  lire dans StreamingAssets (mais pas Ã  faire dans cette classe a priori))
+		//       - RÃ©cupÃ©rer le bouton (enfant de currentAnimal) et s'abonner au OnClick
+		//       - CrÃ©er une mÃ©thode a appeler sur le OnClick qui "fait sortir" le canvas du sol pour le mettre
+		//         Ã  la vertical et faire apparaitre un menu
+		//       - Faire une mÃ©thode appeler quand on click sur un Ã©lÃ©ment du menu, fait la transition vers l'espÃ¨ce choisie
+	}   //       - Faire une mÃ©thode qui "fait revenir" le canvas sur le sol et rÃ©affiche l'espÃ¨ce choisie
 	private void Update()
 	{
 		if(currentMoveWay<0)
 		{
-			switchTime += Time.deltaTime;
-			if(switchTime > 1)
-			{
+			// switchTime += Time.deltaTime;
+			// if(switchTime > 1)
+			// {
 				Set(previousAnimalText.text);
-				return;
-			}
-			previousAnimal.transform.localPosition = previousAnimalPosition - switchCurve.Evaluate(switchTime) * canvasWidth * Vector2.right;
-			currentAnimal.transform.localPosition = currentAnimalPosition - switchCurve.Evaluate(switchTime) * canvasWidth * Vector2.right;
+			// 	return;
+			// }
+		// 	previousAnimal.transform.localPosition = previousAnimalPosition - switchCurve.Evaluate(switchTime) * canvasWidth * Vector2.right;
+		// 	currentAnimal.transform.localPosition = currentAnimalPosition - switchCurve.Evaluate(switchTime) * canvasWidth * Vector2.right;
 		}
 		if (currentMoveWay>0)
 		{
-			switchTime += Time.deltaTime;
-			if (switchTime > 1)
-			{
+			// switchTime += Time.deltaTime;
+			// if (switchTime > 1)
+			// {
 				Set(nextAnimalText.text);
-				return;
-			}
-			nextAnimal.transform.localPosition = nextAnimalPosition + switchCurve.Evaluate(switchTime) * canvasWidth * Vector2.right;
-			currentAnimal.transform.localPosition = currentAnimalPosition + switchCurve.Evaluate(switchTime) * canvasWidth * Vector2.right;
+				// return;
+			// }
+			// nextAnimal.transform.localPosition = nextAnimalPosition + switchCurve.Evaluate(switchTime) * canvasWidth * Vector2.right;
+			// currentAnimal.transform.localPosition = currentAnimalPosition + switchCurve.Evaluate(switchTime) * canvasWidth * Vector2.right;
 		}
 	}
 	public void Set(string animalName)

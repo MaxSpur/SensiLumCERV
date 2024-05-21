@@ -12,6 +12,14 @@ public class UIController : MonoBehaviour
     public static event ToggleMenuDelegate OnToggleMenu;
     public InputActionReference inputActionReference;
 
+     private Coroutine appearanceCoroutine;
+
+    private void Start()
+    {
+        // Make the GameObject initially invisible when the scene launches
+        gameObject.SetActive(true);
+    }
+
     private void Awake()
     {
         inputActionReference.action.Enable();
@@ -28,8 +36,24 @@ public class UIController : MonoBehaviour
 
     private void ToggleMenu(InputAction.CallbackContext context)
     {
-        gameObject.SetActive(!gameObject.activeSelf);
+        // Check if the input action comes from the right controller joystick
+        if (context.action.name.Contains("Snap Turn") || context.action.name.Contains("Teleport Select") )
+        {
+            // If an appearance coroutine is already running, stop it
+            if (appearanceCoroutine != null)
+                StopCoroutine(appearanceCoroutine);
+
+            // Set the object active and start the appearance coroutine
+            gameObject.SetActive(true);
+            appearanceCoroutine = StartCoroutine(DisappearAfterDelay());
+        }
+        else
+        {
+            // Toggle object visibility normally
+            gameObject.SetActive(!gameObject.activeSelf);
+        }
         OnToggleMenu?.Invoke();
+        Debug.Log(context.action.name + " performed!");
     }
 
     private void OnDeviceChange(InputDevice device, InputDeviceChange change)
@@ -47,4 +71,10 @@ public class UIController : MonoBehaviour
         }
     }
 
+
+    private IEnumerator DisappearAfterDelay()
+    {
+        yield return new WaitForSeconds(1f); // Wait for 5 seconds
+        gameObject.SetActive(false); // Deactivate the object after the delay
+    }
 }
