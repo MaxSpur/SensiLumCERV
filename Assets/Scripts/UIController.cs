@@ -37,7 +37,7 @@ public class UIController : MonoBehaviour
     private void ToggleMenu(InputAction.CallbackContext context)
     {
         // Check if the input action comes from the right controller joystick
-        if (context.action.name.Contains("Snap Turn") || context.action.name.Contains("Teleport Select") )
+        if (context.action.name.Contains("Snap Turn") || context.action.name.Contains("Teleport Select"))
         {
             // If an appearance coroutine is already running, stop it
             if (appearanceCoroutine != null)

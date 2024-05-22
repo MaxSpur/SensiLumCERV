@@ -36,7 +36,10 @@ public class ChooseLightStep : MonoBehaviour
                  // Execute snap turn logic
                 ActionPerformed();
             }
-            
+            if (toggle1.isOn || toggle2.isOn || toggle3.isOn || toggle4.isOn || toggle5.isOn)
+            {
+                buttonToUnlock.interactable = true;
+            }
         }
     }
 
@@ -83,12 +86,9 @@ public class ChooseLightStep : MonoBehaviour
             allChecked = true;
         }
 
-        if (allChecked ){
-            if (toggle1.isOn || toggle2.isOn || toggle3.isOn || toggle4.isOn || toggle5.isOn)
-            {
-                buttonToUnlock.interactable = true;
-            }
-        }
+        //if (allChecked ){
+        
+        //}
     }
 
 }
