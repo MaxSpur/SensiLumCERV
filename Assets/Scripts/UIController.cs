@@ -74,7 +74,7 @@ public class UIController : MonoBehaviour
 
     private IEnumerator DisappearAfterDelay()
     {
-        yield return new WaitForSeconds(1f); // Wait for 5 seconds
+        yield return new WaitForSeconds(5f); // Wait for 5 seconds
         gameObject.SetActive(false); // Deactivate the object after the delay
     }
 }
