@@ -72,7 +72,8 @@ public class SpeciesSwitcher : MonoBehaviour
 		}
 		if (inTransition)
 		{
-			textureBlend += Time.deltaTime;
+			//textureBlend += Time.deltaTime;
+			textureBlend = 2; // use this line instead of the above line to transition instantly to the next texture
 			if(textureBlend>1)
 			{
 				textureBlend = 0;
@@ -94,13 +95,70 @@ public class SpeciesSwitcher : MonoBehaviour
 		//DisplayAnimalsName();
 	}
 
-	public void ApplyPostProcess()
-	{
+	public void ApplyPostProcess(){
 		bloom.intensity.value = bloomParams[indexTexture0][lightmapSwitcher.current].intensity;
 		bloom.scatter.value = bloomParams[indexTexture0][lightmapSwitcher.current].scatter;
 		bloom.tint.value = bloomParams[indexTexture0][lightmapSwitcher.current].tint;
 		colorAdjustments.postExposure.value = postExposure[indexTexture0][lightmapSwitcher.current];
 	}
+
+	public void SetHumanTexture()
+	{
+		postProcess.SetFloat("_Blend", 0);
+		postProcess.SetTexture("_Texture0", textures[0]);
+		postProcess.SetTexture("_Texture1", textures[0]);
+
+		bloom.intensity.value = bloomParams[0][lightmapSwitcher.current].intensity;
+		bloom.scatter.value = bloomParams[0][lightmapSwitcher.current].scatter;
+		bloom.tint.value = bloomParams[0][lightmapSwitcher.current].tint;
+		colorAdjustments.postExposure.value = postExposure[0][lightmapSwitcher.current];
+
+		animals_text.text = names[0];
+	}
+
+	public void SetBatTexture()
+	{
+		postProcess.SetFloat("_Blend", 1);
+		postProcess.SetTexture("_Texture0", textures[1]);
+		postProcess.SetTexture("_Texture1", textures[1]);
+
+		bloom.intensity.value = bloomParams[1][lightmapSwitcher.current].intensity;
+		bloom.scatter.value = bloomParams[1][lightmapSwitcher.current].scatter;
+		bloom.tint.value = bloomParams[1][lightmapSwitcher.current].tint;
+		colorAdjustments.postExposure.value = postExposure[1][lightmapSwitcher.current];
+
+		animals_text.text = names[1];
+	}
+
+	public void SetAnoureTexture()
+	{
+		postProcess.SetFloat("_Blend", 2);
+		postProcess.SetTexture("_Texture0", textures[2]);
+		postProcess.SetTexture("_Texture1", textures[2]);
+
+		bloom.intensity.value = bloomParams[2][lightmapSwitcher.current].intensity;
+		bloom.scatter.value = bloomParams[2][lightmapSwitcher.current].scatter;
+		bloom.tint.value = bloomParams[2][lightmapSwitcher.current].tint;
+		colorAdjustments.postExposure.value = postExposure[2][lightmapSwitcher.current];
+
+		animals_text.text = "Grenouille";
+	}
+
+	public void SetPassereauTexture()
+	{
+		postProcess.SetFloat("_Blend", 3);
+		postProcess.SetTexture("_Texture0", textures[3]);
+		postProcess.SetTexture("_Texture1", textures[3]);
+
+		bloom.intensity.value = bloomParams[3][lightmapSwitcher.current].intensity;
+		bloom.scatter.value = bloomParams[3][lightmapSwitcher.current].scatter;
+		bloom.tint.value = bloomParams[3][lightmapSwitcher.current].tint;
+		colorAdjustments.postExposure.value = postExposure[3][lightmapSwitcher.current];
+
+		animals_text.text = names[3];
+	}
+
+
 
 	private void OnDestroy()
 	{
