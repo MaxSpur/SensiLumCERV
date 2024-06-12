@@ -26,7 +26,7 @@ public class TextureUpdate : MonoBehaviour
         {
             rawImage.texture = Texture2;
         }
-        else if (text.text == "Grenouille" || text.text == "Éclairage LED")
+        else if (text.text == "Grenouille" ||text.text == "Anoure" || text.text == "Éclairage LED")
         {
             rawImage.texture = Texture3;
         }
